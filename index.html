@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页书写第二次迭代</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+        }
+        /* *{
+            border: 1px solid #000;
+        } */
+        .flex{
+            display: flex;
+        }
+        .baiSe{
+            background-color: #fff;
+            box-shadow: 10px 10px 10px #40afb3;
+        }
+        .flex1{
+            flex: 1;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .mg8{
+            margin: 8px;
+        }
+        .mgr8{
+
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .daoHang{
+            padding: 10px 20px;
+            border-bottom: 1px solid #999;
+            font-size: 15px;
+            color: #746f67ec;
+        }
+        /* 当屏幕小于600px时，应用以下样式 */
+        @media (max-width: 600px) {
+            .ceBian{
+                display: none;
+            }
+            .neiRong{
+                flex-direction: column;}
+            .shuJuQu{
+                flex-direction: column;}
+            .youQu{
+                margin-left: 8px ;
+            }
+            .shuJu{
+                margin: 0 0 8px;
+                flex: auto;
+            }
+        }
+        /* 隐藏滚动条 */
+        .neiRong::-webkit-scrollbar{
+            display: none;
+        }
+    </style>
+</head>
+<body class="flex">
+    <!-- 侧边栏 -->
+     <div style="width: 200px; z-index: 2;" class="baiSe ceBian">
+        <!-- 头像栏 -->
+         <div class="flex" style="padding: 10px; align-items: center; justify-content: center; border-bottom: 1px solid #999;">
+            <img src="https://s21.ax1x.com/2024/06/22/pkrlsl6.md.jpg"
+          alt="王波"
+          width="80px"
+          height="80px">
+          <div style="margin-left: 15px;"><b>王波</b></div>
+         </div>
+        <!-- 导航栏 -->
+         <div class="flex1">
+            <div class="daoHang">国家：中国</div>
+            <div class="daoHang">现居地：四川成都</div>
+            <div class="daoHang">生日:2000.07</div>
+            <div class="daoHang">邮箱:
+                2814140085@qq.com</div>
+         </div>
+     </div>
+    <!-- 主区域 -->
+     <div class="flex1 flex column">
+        <!-- 头部 -->
+         <div style="height: 60px; z-index: 1px; align-items: center; justify-content: center;" class="flex baiSe">
+            <div style="padding: 10px; font-size: 30px; color: black; font-weight: 500">详 细 信 息</div>
+         </div>
+        <!-- 内容区域 -->
+         <div  style="overflow: auto;" class="flex1 flex neiRong">
+            <!-- 左侧 -->
+             <div style="flex: 3;" class="flex column mg8">
+                <!-- 数据区 -->
+                 <div class="flex shuJuQu">
+                    <!-- 数据块 -->
+                     <div style="height: 100px; padding: 10px ;align-items: center; justify-content: center;" class="flex1 flex shuJu baiSe mgr8"><div style="font-size: 20px;">Web3.0</div></div>
+                     <div style="height: 100px; padding: 10px ;align-items: center; justify-content: center;" class="flex1 flex shuJu baiSe mgr8"><div style="font-size: 20px;">元宇宙</div></div>
+                     <div style="height: 100px; padding: 10px ;align-items: center; justify-content: center;" class="flex1 flex shuJu baiSe mgr8"><div style="font-size: 20px;">数字世界</div></div>
+                     <div style="height: 100px; padding: 10px ;align-items: center; justify-content: center;" class="flex1 flex shuJu baiSe"><div style="font-size: 20px;">AI浪潮</div></div>
+                 </div>
+                <!-- 列表区 -->
+                 <div class="flex column">
+                    <!-- 列表项 -->
+                     <div style="height: 160px;" class="baiSe mgt8">一个来自四川的年轻人,热爱编程,对Web3.0、元宇宙、数字世界、AI浪潮等领域有浓厚兴趣。</div>
+                     <div style="height: 160px;" class="baiSe mgt8">本科学习的是其余专业，但是发现自己对于数字技术十分热爱，于是最近便开始了探索数字世界之旅。</div>
+                     <div style="height: 160px;" class="baiSe mgt8">目前在学习的内容是Python、JavaScript、HTML、CSS等。后续有一定技术能力储备后,将不断拥抱和探索前沿技术。梦想是将数字世界带给每一个人，让人人都能够享受数字技术带来的便利。</div>
+                     <div style="height: 160px;" class="baiSe mgt8">目前在试运行一个公众号，名称是“集合地球村”。上面分享的是一些提高生产力的工具详细网址（主要是自己刚接触这些时在搜索引擎上找网址会很大概率点击到广告上面去，所以就萌生了这样一个想法）。后续还会推送给多的纯净干货，欢迎大家关注。</div>
+                    <div style="height: 160px;" class="baiSe mgt8"><p>我的哔哩哔哩主页：
+                        <a href="https://space.bilibili.com/524187144?spm_id_from=333.1007.0.0">初夏凛冬呀</a>
+                    </p></div>
+                 </div>
+             </div>
+            <!-- 右侧 -->
+             <div style="flex: 1;" class="youQu flex column mgr8 mgt8">
+                <!-- 提示区 -->
+                 <div style="height: 150px; align-items: center; justify-content: space-between;" class="baiSe column flex">
+                    <div style="padding: 10px;">AI革命浪潮下</div>
+                    <div style="padding: 10px;">没有任何一个人</div>
+                    <div style="padding: 10px;">会是一座孤岛</div>
+                </div>
+                <!-- 消息区 -->
+                 <div style="height: 200px; align-items: center; justify-content: space-between;" class="column flex  baiSe mgt8">
+                    <div>期待未来有更多的合作伙伴</div>
+                    <div>因为每一位合作伙伴</div>
+                    <div>都是我们需要集结的力量</div>
+                    <div>投身于建设数字世界的浪潮</div>
+                    <div>独行快，众行远</div>
+                    <div>让我们一起打开新时代的大门</div>
+                 </div>
+             </div>
+         </div>
+        
+     </div>
+</body>
+</html>
